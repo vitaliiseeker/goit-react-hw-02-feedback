@@ -21,9 +21,7 @@ const Statistics = ({ good, neutral, bad, total, positivePercentage }) => (
             </li>
         </List>
     </>
-
 )
-
 
 Statistics.propTypes = {
     good: PropTypes.number,
@@ -32,6 +30,5 @@ Statistics.propTypes = {
     total: PropTypes.number,
     positivePercentage: PropTypes.number
 }
-
 
 export default Statistics;
