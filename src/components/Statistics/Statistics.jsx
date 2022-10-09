@@ -1,24 +1,37 @@
-import PropTypes from "prop-types";
-import css from "./Statistics.module.css";
-import { getRandomHexColor } from "../../module/getRandomHexColor";
+import PropTypes from 'prop-types';
+import { List } from './Statistics.styled';
 
-export const Statistics = ({ title, stats }) => {
-    return (
-        <section className={css.statistics}>
-            {title && (<h2 className={css.title}>{title}</h2>)}
-            <ul className={css.list}>
-                {stats.map(s => (
-                    <li className={css.item} key={s.id} style={{ backgroundColor: getRandomHexColor() }}>
-                        <span className={css.label}>{s.label}</span>
-                        <span className={css.percentage}>{s.percentage}%</span>
-                    </li>
-                ))}
-            </ul>
-        </section>
-    )
-}
+const Statistics = ({ good, neutral, bad, total, positivePercentage }) => (
+    <>
+        <List>
+            <li key="good">
+                <p >Good: {good}</p>
+            </li>
+            <li key="neutral">
+                <p >Neutral: {neutral}</p>
+            </li>
+            <li key="bad" >
+                <p >Bad: {bad}</p>
+            </li>
+            <li key="total" >
+                <p >Total: {total}</p>
+            </li>
+            <li key="positivePercentage" >
+                <p >Positive feedback: {positivePercentage}%</p>
+            </li>
+        </List>
+    </>
+
+)
+
 
 Statistics.propTypes = {
-    title: PropTypes.string,
-    stats: PropTypes.array.isRequired
+    good: PropTypes.number,
+    neutral: PropTypes.number,
+    bad: PropTypes.number,
+    total: PropTypes.number,
+    positivePercentage: PropTypes.number
 }
+
+
+export default Statistics;
