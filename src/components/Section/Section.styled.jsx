@@ -7,5 +7,4 @@ padding: 20px;
 export const Title = styled.h2`
 font-size: 34px;
 padding-bottom: 20px;
-
 `;

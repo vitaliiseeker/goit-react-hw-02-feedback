@@ -6,8 +6,11 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => (
     <>
         <List>
             {Object.keys(options).map(key =>
-                <li key={key}><Button name={key} onClick={(e) =>
-                    onLeaveFeedback(e)}>{key}</Button>
+                <li key={key}>
+                    <Button
+                        name={key}
+                        onClick={(e) => onLeaveFeedback(e)}>{key}
+                    </Button>
                 </li>)
             }
         </List>
@@ -16,7 +19,7 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => (
 
 FeedbackOptions.propTypes = {
     options: PropTypes.object.isRequired,
-    onLeaveFeedback: PropTypes.func.isRequired
+    onLeaveFeedback: PropTypes.func.isRequired,
 }
 
 export default FeedbackOptions;

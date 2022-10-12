@@ -18,7 +18,6 @@ export class App extends Component {
 
   countTotalFeedback = () => Object.values(this.state).reduce((acc, el) => acc += el, 0);
 
-
   countPositiveFeedbackPercentage = (total) => Math.round(this.state.good * 100 / total);
 
   render() {

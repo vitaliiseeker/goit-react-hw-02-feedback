@@ -4,7 +4,7 @@ import { List } from './Statistics.styled';
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => (
     <>
         <List>
-            <li key="good">
+            <li key="good" >
                 <p >Good: {good}</p>
             </li>
             <li key="neutral">
@@ -28,7 +28,7 @@ Statistics.propTypes = {
     neutral: PropTypes.number,
     bad: PropTypes.number,
     total: PropTypes.number,
-    positivePercentage: PropTypes.number
+    positivePercentage: PropTypes.number,
 }
 
 export default Statistics;
